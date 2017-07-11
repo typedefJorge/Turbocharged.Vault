@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
 using System.Net.Http;
 using System.Security;
 using System.Text;
@@ -14,7 +13,7 @@ namespace Turbocharged.Vault
     /// <summary>
     /// A client for communicating with a vault server.
     /// </summary>
-    public class VaultClient
+    public class VaultClient: IVaultClient
     {
         readonly HttpClient _client = new HttpClient();
         readonly Uri _baseUri;
